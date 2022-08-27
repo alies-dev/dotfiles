@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo 'start osx/set-defaults.sh'
+echo 'start macos/set-defaults.sh'
 
 # Ask for the administrator password upfront
 sudo -v

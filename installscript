@@ -52,6 +52,10 @@ echo 'Install node'
 echo '------------'
 brew install node
 
+echo 'Install warp'
+echo '------------'
+brew install warp
+
 echo 'Install pkg-config'
 echo '------------------'
 brew install pkg-config
@@ -63,6 +67,10 @@ brew install wget
 echo 'Install httpie'
 echo '--------------'
 brew install httpie
+
+echo 'Install ngrok'
+echo '--------------'
+brew install ngrok
 
 echo 'Install ncdu'
 echo '------------'
