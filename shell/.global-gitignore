@@ -18,10 +18,3 @@ Thumbs.db
 
 # Sublime Text
 *.sublime-project
-
-# Node
-node_modules
-npm-debug.log
-yarn-error.log
-.phpunit-watcher-cache.php
-.phpunit.result.cache
