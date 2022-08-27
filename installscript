@@ -7,7 +7,7 @@ touch $HOME/.hushlogin
 echo 'Install oh-my-zsh'
 echo '-----------------'
 rm -rf $HOME/.oh-my-zsh
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+curl -L https://raw.githubusercontent.com/ohmyzsh/oh-my-zsh/master/tools/install.sh | sh
 
 # Add global gitignore
 ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
@@ -26,9 +26,9 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 # Symlink the Mackup config
 ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
 
-# Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
-cd ~/.oh-my-zsh/themes/
-git checkout d6a36b1 agnoster.zsh-theme
+# Fix missing font characters (see https://github.com/ohmyzsh/ohmyzsh/issues/1906)
+#cd ~/.oh-my-zsh/themes/
+#git checkout d6a36b1 agnoster.zsh-theme
 
 # Activate z
 cd ~/.dotfiles/shell
@@ -110,17 +110,17 @@ rm composer-setup.php
 sudo mkdir /usr/local/bin/
 sudo mv composer.phar /usr/local/bin/composer
 
-echo 'Install imagemagick'
-echo '-------------------'
-brew install imagemagick
+#echo 'Install imagemagick'
+#echo '-------------------'
+#brew install imagemagick
 
-echo 'Install imagick'
-echo '---------------'
-pecl install imagick
+#echo 'Install imagick'
+#echo '---------------'
+#pecl install imagick
 
-echo 'Install memcached'
-echo '-----------------'
-pecl install memcached
+#echo 'Install memcached'
+#echo '-----------------'
+#pecl install memcached
 
 echo 'Install xdebug'
 echo '--------------'
@@ -130,18 +130,18 @@ echo 'Install redis'
 echo '-------------'
 pecl install redis
 
-echo 'Install laravel envoy'
-echo '---------------------'
-composer global require "laravel/envoy=~2.0"
+#echo 'Install laravel envoy'
+#echo '---------------------'
+#composer global require "laravel/envoy=~2.0"
 
 echo 'Install phpunit-watcher'
 echo '-----------------------'
 composer global require spatie/phpunit-watcher
 
-echo 'Install laravel valet'
-echo '---------------------'
-composer global require laravel/valet
-valet install
+#echo 'Install laravel valet'
+#echo '---------------------'
+#composer global require laravel/valet
+#valet install
 
 echo 'Install mysql'
 echo '-------------'
@@ -152,9 +152,9 @@ echo 'Install yarn'
 echo '------------'
 brew install yarn
 
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
+#echo 'Install ghostscript'
+#echo '-------------------'
+#brew install ghostscript
 
 echo 'Install mackup'
 echo '--------------'
