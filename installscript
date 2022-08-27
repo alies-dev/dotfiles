@@ -56,6 +56,10 @@ echo 'Install warp'
 echo '------------'
 brew install warp
 
+echo 'Install raycast'
+echo '------------'
+brew install raycast
+
 echo 'Install pkg-config'
 echo '------------------'
 brew install pkg-config
