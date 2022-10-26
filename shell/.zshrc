@@ -76,6 +76,9 @@ ssh-add -A 2>/dev/null;
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=VSCODE"
 
+# Setup composer
+export COMPOSER_MEMORY_LIMIT=-1
+
 # Enable autosuggestions
 #source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
