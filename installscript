@@ -148,9 +148,9 @@ pecl install redis
 #echo '---------------------'
 #composer global require "laravel/envoy=~2.0"
 
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
+#echo 'Install phpunit-watcher'
+#echo '-----------------------'
+#composer global require spatie/phpunit-watcher
 
 #echo 'Install laravel valet'
 #echo '---------------------'

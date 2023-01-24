@@ -11,11 +11,11 @@ alias dart='docker-compose exec app php artisan'
 
 # PHP
 alias phpunit="vendor/bin/phpunit"
-alias phpunitw="phpunit-watcher watch"
+#alias phpunitw="phpunit-watcher watch"
 alias c="composer"
 alias cu="composer update"
-#alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"
-#alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
+#alias switch-php82="brew unlink php@8.1 && brew link --overwrite --force php"
+#alias switch-php81="brew unlink php && brew link --overwrite --force php@8.1"
 
 ## Laravel
 alias art="php artisan"
