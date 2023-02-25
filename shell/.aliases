@@ -22,7 +22,7 @@ alias art="php artisan"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias tunnel='ngrok http 80'
 
-alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
+alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 
 # Git
 alias nah='git reset --hard;git clean -df'
