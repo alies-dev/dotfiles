@@ -14,11 +14,13 @@ alias phpunit="vendor/bin/phpunit"
 #alias phpunitw="phpunit-watcher watch"
 alias c="composer"
 alias cu="composer update"
-#alias switch-php82="brew unlink php@8.1 && brew link --overwrite --force php"
-#alias switch-php81="brew unlink php && brew link --overwrite --force php@8.1"
+alias switch-php82="brew unlink php@8.1 && brew link --overwrite --force php"
+alias switch-php81="brew unlink php && brew link --overwrite --force php@8.1"
+alias repl="php -a"
 
 ## Laravel
 alias art="php artisan"
+alias xserve="php -dxdebug.remote_enable=1 -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1 artisan serve"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias tunnel='ngrok http 80'
 
