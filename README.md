@@ -1,6 +1,6 @@
 # My personal dotfiles
 
-My personal dotfiles. Its heavy inspired by [freek](https://freek.dev/uses).
+My personal dotfiles. Its heavy inspired by [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) and [Freek](https://freek.dev/uses).
 
 It contains the installation of some basic tools, some handy aliases and functions. Backups of settings are done via [Mackup](https://github.com/lra/mackup).
 

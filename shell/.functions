@@ -72,13 +72,8 @@ function removehost() {
 }
 
 function weather() {
-   city="$1"
-
-   if [ -z "$city" ]; then
-      city="Minsk"
-   fi
-
-   eval "curl http://wttr.in/${city}"
+   local city="${1:-Minsk}"
+   curl http://wttr.in/${city// /+}\?F
 }
 
 alias mysqladm='mysql -u root'
