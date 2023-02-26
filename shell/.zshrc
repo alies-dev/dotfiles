@@ -74,7 +74,7 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -A 2>/dev/null;
 
 # Setup xdebug
-export XDEBUG_CONFIG="idekey=VSCODE"
+export XDEBUG_CONFIG="idekey=PHPSTORM"
 
 # Setup composer
 export COMPOSER_MEMORY_LIMIT=-1
