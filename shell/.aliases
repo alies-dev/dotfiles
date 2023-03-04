@@ -1,5 +1,5 @@
 # Docker
-alias dcu='docker-compose up'
+alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dce='docker-compose exec'
 alias dc1='docker-compose start'
