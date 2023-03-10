@@ -82,6 +82,11 @@ defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
 defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
 defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
 
+# https://www.macrumors.com/how-to/enable-aptx-aac-bluetooth-audio-codecs-macos/
+sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true
+# Alternatively, to enable AAC, input the following and press Enter:
+#sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
+
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
