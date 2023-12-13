@@ -1,3 +1,29 @@
+# Example switch-php 8.3
+# Example switch-php 8.2
+# Example switch-php 8.1
+function switch-php {
+  new_version=$1
+
+  is_new_version_default=0
+  if [[ $(readlink /usr/local/opt/php | grep -o '[0-9]\+\.[0-9]\+') == "$new_version" ]]; then # Check if the 'php' link points to the version we want to switch to
+    is_new_version_default=1
+  fi
+
+  if [[ $is_new_version_default -eq 1 && ! -d "/opt/homebrew/Cellar/php@$new_version" ]]; then  # checks if the directory does not exist
+      echo "PHP version $new_version is not installed using brew. You can install it with 'brew install php@$new_version'" >&2
+      return 1
+  fi
+
+  current_version=$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")
+  if [[ $is_new_version_default -eq 1 ]]; then
+    # Special case for default php version
+    brew unlink php@$current_version && brew link --overwrite --force php
+  else
+    brew unlink php@$current_version && brew link --overwrite --force php@$new_version
+  fi
+}
+
+
 # Run tests
 function p() {
    if [ -f vendor/bin/pest ]; then
