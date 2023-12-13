@@ -105,8 +105,8 @@ brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatc
 echo 'Install php'
 echo '-----------'
 brew tap shivammathur/php
-brew install shivammathur/php/php@8.2
-brew link --overwrite --force php@8.2
+brew install shivammathur/php/php@8.3
+brew link --overwrite --force php@8.3
 
 echo 'Install composer'
 echo '----------------'
@@ -157,10 +157,10 @@ pecl install redis
 #composer global require laravel/valet
 #valet install
 
-echo 'Install mysql'
-echo '-------------'
-brew install mysql
-brew services start mysql
+#echo 'Install mysql'
+#echo '-------------'
+#brew install mysql
+#brew services start mysql
 
 echo 'Install yarn'
 echo '------------'
