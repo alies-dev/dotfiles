@@ -70,10 +70,6 @@ echo 'Install wget'
 echo '------------'
 brew install wget
 
-echo 'Install httpie'
-echo '--------------'
-brew install httpie
-
 echo 'Install ngrok'
 echo '--------------'
 brew install ngrok
@@ -82,15 +78,11 @@ echo 'Install ncdu'
 echo '------------'
 brew install ncdu
 
-echo 'Install hub'
-echo '-----------'
-brew install hub
-
 echo 'Install ack'
 echo '-----------'
 brew install ack
 
-echo 'Install doctl'
+echo 'Install doctl (DigitalOcean CLI)'
 echo '-------------'
 brew install doctl
 
@@ -100,7 +92,7 @@ brew install git-secret
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip  suspicious-package
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip syntax-highlight suspicious-package
 
 echo 'Install php'
 echo '-----------'
@@ -188,7 +180,7 @@ echo '2. Install patched solarized theme included in ~/.dotfiles/misc, see https
 echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
-echo '1. Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You'\''ll find more info on Mackup here: https://github.com/lra/mackup.'
+echo '1. Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You’ll find more info on Mackup here: https://github.com/lra/mackup.'
 echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '3. Make a .dotfiles-custom/shell/.aliases for your personal commands'
 
