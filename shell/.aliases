@@ -4,6 +4,7 @@ alias dcd='docker-compose down'
 alias dce='docker-compose exec'
 alias dc1='docker-compose start'
 alias dc0='docker-compose stop'
+alias dcr='docker-compose restart'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias dceo='docker-compose exec composer'
@@ -14,6 +15,7 @@ alias phpunit="vendor/bin/phpunit"
 #alias phpunitw="phpunit-watcher watch"
 alias c="composer"
 alias repl="php -a"
+alias dep='vendor/bin/dep'
 
 ## Laravel
 alias art="php artisan"
