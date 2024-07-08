@@ -1,14 +1,14 @@
 # Docker
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
-alias dce='docker-compose exec'
-alias dc1='docker-compose start'
-alias dc0='docker-compose stop'
-alias dcr='docker-compose restart'
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
+alias dce='docker compose exec'
+alias dc1='docker compose start'
+alias dc0='docker compose stop'
+alias dcr='docker compose restart'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
-alias dceo='docker-compose exec composer'
-alias dart='docker-compose exec app php artisan'
+alias dceo='docker compose exec composer'
+alias dart='docker compose exec app php artisan'
 
 # PHP
 alias phpunit="vendor/bin/phpunit"
