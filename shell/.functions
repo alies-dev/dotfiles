@@ -1,54 +1,3 @@
-# Example switch-php 8.3
-# Example switch-php 8.2
-# Example switch-php 8.1
-function switch-php {
-  new_version=$1
-
-  # Verify if the argument is correctly provided
-  if [[ -z "${new_version}" ]]; then
-      echo "You must specify a PHP version to switch to. Example: 'switch-php 8.3'" >&2
-      return 1
-  fi
-
-  current_link=$(readlink -f /usr/local/opt/php)
-  is_new_version_default=0
-  if [[ current_link == *"${new_version}"* ]]; then
-    is_new_version_default=1
-  fi
-
-  if [[ $is_new_version_default -eq 0 && ! -d "/opt/homebrew/Cellar/php@$new_version" ]]; then  # checks if the directory does not exist
-    echo "PHP version $new_version is not installed using brew. You can install it with 'brew install php@$new_version'" >&2
-    return 1
-  fi
-
-  current_version=$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")
-  # Decide on the version to switch to
-  switch_to_version="php"
-  if [[ $is_new_version_default -eq 0 ]]; then
-      switch_to_version="php@$new_version"
-  fi
-
-  brew unlink php@$current_version && brew link --overwrite --force $switch_to_version
-}
-
-
-# Run tests
-function p() {
-   if [ -f vendor/bin/pest ]; then
-      vendor/bin/pest "$@"
-   else
-      vendor/bin/phpunit "$@"
-   fi
-}
-
-function pf() {
-   if [ -f vendor/bin/pest ]; then
-      vendor/bin/pest --filter "$@"
-   else
-      vendor/bin/phpunit --filter "$@"
-   fi
-}
-
 # Docker
 function ssh-docker() {
    docker exec -it "$@" bash
@@ -64,32 +13,13 @@ function server() {
 	local port="${1:-9000}"
 	sleep 2 && open "http://localhost:${port}/" &
 	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
+	# And serve everything as UTF-8 (although not technically correct, this doesn't break anything for binary files)
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
-}
-
-# Start a PHP server from a directory, optionally specifying the port
-# (Requires PHP 5.4.0+.)
-function phpserver() {
-	local port="${1:-4000}"
-	local ip=$(ipconfig getifaddr en0)
-	sleep 2 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}"
 }
 
 # All the dig info
 function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer
-}
-
-function tinker()
-{
-  if [ -z "$1" ]
-    then
-       php artisan tinker
-    else
-       php artisan tinker --execute="dd($1);"
-  fi
 }
 
 #shortcut voor zhs quick-look command
@@ -117,10 +47,6 @@ function scrapeUrl() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
 
-function rector() {
-   docker run -v $(pwd):/project rector/rector:latest process /project/$1 --set php81 --autoload-file /project/vendor/autoload.php
-}
-
 #  Commit everything
 function commit() {
   commitMessage="$*"
@@ -131,23 +57,6 @@ function commit() {
 
   git add .
   eval "git commit -a -m '${commitMessage}'"
-}
-
-xdebug() {
-   phpVersion=`php -v | grep -oE 'PHP [0-9]+\.[0-9]+' | awk '{print $2}'`;
-   iniFileLocation="/opt/homebrew/etc/php/$phpVersion/php.ini";
-
-   currentLine=`cat $iniFileLocation | grep xdebug.so`
-
-   if [[ $currentLine =~ ^#zend_extension ]];
-   then
-      sed -i -e 's/^#zend_extension/zend_extension/g' $iniFileLocation
-      echo "xdebug is now active";
-   else
-      sed -i -e 's/^zend_extension/#zend_extension/g' $iniFileLocation
-      echo "xdebug is now inactive";
-   fi
-   echo "$iniFileLocation file has been updated";
 }
 
 function db {
@@ -178,15 +87,6 @@ function opendb () {
    open $DB_URL
 }
 
-function scheduler () {
-    while :; do
-        php artisan schedule:run
-	echo "Sleeping 60 seconds..."
-        sleep 60
-    done
-}
-
 function silent() {
    "$@" >& /dev/null
 }
-
