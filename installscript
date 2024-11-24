@@ -116,6 +116,9 @@ rm composer-setup.php
 sudo mkdir /usr/local/bin/
 sudo mv composer.phar /usr/local/bin/composer
 
+echo 'Install cpx'
+composer global require cpx/cpx
+
 #echo 'Install imagemagick'
 #echo '-------------------'
 #brew install imagemagick
