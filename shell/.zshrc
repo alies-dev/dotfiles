@@ -45,11 +45,11 @@ bindkey -s "^[Oo" "/"
 
 # Load the shell dotfiles, and then some:
 # * ~/.dotfiles-custom can be used for other settings you don’t want to commit.
-for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
+for file in ~/.dotfiles/shell/.{exports,aliases,functions,functionsphp}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 
-for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
+for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,functionsphp,zshrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
