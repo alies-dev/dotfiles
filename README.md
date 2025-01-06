@@ -8,7 +8,7 @@ You can install them by cloning the repository as `.dotfiles` in your home direc
 
 ```bash
 cd ~
-git clone git@github.com:lptn/dotfiles.git .dotfiles
+git clone git@github.com:alies-dev/dotfiles.git .dotfiles
 cd .dotfiles
 ./bootstrap
 ```

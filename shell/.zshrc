@@ -1,3 +1,6 @@
+# Ensure Homebrew provided bins are used instead of system-provided ones
+export PATH="/opt/homebrew/sbin:$PATH"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -20,6 +23,7 @@ plugins=(git laravel4 laravel5 composer macos vagrant)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=Users/$DEFAULT_USER/.rvm/gems/ruby-2.1.2/bin:$PATH
+
 #set numeric keys
 # 0 . Enter
 bindkey -s "^[Op" "0"
@@ -90,3 +94,9 @@ export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Added by Windsurf
+export PATH="/Users/alies/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alies/.cache/lm-studio/bin"
