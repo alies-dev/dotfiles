@@ -62,6 +62,12 @@ echo 'Install raycast'
 echo '------------'
 brew install raycast
 
+echo 'Install Sublime Text'
+echo '------------'
+brew install --cask sublime-text
+# https://stackoverflow.com/questions/16199581/open-sublime-text-from-terminal-in-macos
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
 echo 'Install pkg-config'
 echo '------------------'
 brew install pkg-config
