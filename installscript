@@ -3,8 +3,6 @@
 # Hide "last login" line when starting a new terminal session
 touch $HOME/.hushlogin
 
-OS_USERNAME = 'alies';
-
 # Install zsh
 echo 'Install oh-my-zsh'
 echo '-----------------'
