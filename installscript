@@ -64,6 +64,10 @@ echo 'Install GitHub CLI'
 echo '------------------'
 brew install gh
 
+echo 'Install HTTPie (HTTP client)'
+echo '----------------------------'
+brew install httpie
+
 echo 'Install doctl (DigitalOcean CLI)'
 echo '--------------------------------'
 brew install doctl
@@ -96,6 +100,14 @@ echo 'Install pie (PHP extension installer)'
 echo '-------------------------------------'
 brew install pie
 
+echo 'Install micro (terminal text editor)'
+echo '------------------------------------'
+brew install micro
+
+echo 'Install pandoc (document converter)'
+echo '-----------------------------------'
+brew install pandoc
+
 echo '==================================='
 echo 'SYSTEM UTILITIES'
 echo '==================================='
@@ -115,6 +127,22 @@ brew install ack
 echo 'Install typos-cli (codebase spell checker)'
 echo '-----------------'
 brew install typos-cli
+
+echo 'Install gping (visual ping)'
+echo '---------------------------'
+brew install gping
+
+echo 'Install htop (system monitor)'
+echo '-----------------------------'
+brew install htop
+
+echo 'Install mtr (network diagnostic)'
+echo '--------------------------------'
+brew install mtr
+
+echo 'Install bat (cat with syntax highlighting)'
+echo '------------------------------------------'
+brew install bat
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'

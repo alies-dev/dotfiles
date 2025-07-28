@@ -18,11 +18,11 @@ git clone git@github.com:alies-dev/dotfiles.git .dotfiles
 You can clone the repository to any location and create a symlink to your home directory:
 
 ```bash
-# Clone to any directory (e.g., ~/code/dotfiles)
-git clone git@github.com:alies-dev/dotfiles.git ~/code/dotfiles
+# Clone to any directory (e.g., ~/code/alies-dev/dotfiles)
+git clone git@github.com:alies-dev/dotfiles.git ~/code/alies-dev/dotfiles
 
 # Create symlink from home directory
-ln -s ~/code/dotfiles ~/.dotfiles
+ln -s ~/code/alies-dev/dotfiles ~/.dotfiles
 ```
 
 The bootstrap script can be run by cd-ing into the `.dotfiles` directory and performing this command:
