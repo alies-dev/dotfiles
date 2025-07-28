@@ -36,12 +36,6 @@ ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-echo 'Configure npm'
-echo '-------------'
-# Create a directory for global packages and tell npm where to store globally installed packages
-mkdir "${HOME}/.npm-packages"
-npm config set prefix "${HOME}/.npm-packages"
-
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
@@ -50,35 +44,67 @@ sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+echo '==================================='
+echo 'DEVELOPMENT TOOLS'
+echo '==================================='
+
 echo 'Install node'
 echo '------------'
 brew install node
 
-echo 'Install warp'
-echo '------------'
-brew install warp
-
-echo 'Install raycast'
-echo '------------'
-brew install raycast
-
-echo 'Install Sublime Text'
-echo '------------'
-brew install --cask sublime-text
-# https://stackoverflow.com/questions/16199581/open-sublime-text-from-terminal-in-macos
-sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+echo 'Configure npm'
+echo '-------------'
+# Create a directory for global packages and tell npm where to store globally installed packages
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
 
 echo 'Install pkg-config'
 echo '------------------'
 brew install pkg-config
 
-echo 'Install wget'
-echo '------------'
-brew install wget
+echo 'Install GitHub CLI'
+echo '------------------'
+brew install gh
+
+echo 'Install doctl (DigitalOcean CLI)'
+echo '--------------------------------'
+brew install doctl
+
+echo 'Install Supabase CLI'
+echo '--------------------'
+brew install supabase
 
 echo 'Install ngrok'
 echo '--------------'
 brew install ngrok
+
+echo 'Install watchman'
+echo '----------------'
+brew install watchman
+
+echo 'Install uv (Python package manager)'
+echo '------------------------------------'
+brew install uv
+
+echo 'Install composer'
+echo '----------------'
+brew install composer
+
+#echo 'Install PHP 8.4'
+#echo '---------------'
+#brew install php@8.4
+
+echo 'Install pie (PHP extension installer)'
+echo '-------------------------------------'
+brew install pie
+
+echo '==================================='
+echo 'SYSTEM UTILITIES'
+echo '==================================='
+
+echo 'Install wget'
+echo '------------'
+brew install wget
 
 echo 'Install ncdu'
 echo '------------'
@@ -88,43 +114,162 @@ echo 'Install ack'
 echo '-----------'
 brew install ack
 
-echo 'Install doctl (DigitalOcean CLI)'
-echo '-------------'
-brew install doctl
+echo 'Install typos-cli'
+echo '-----------------'
+brew install typos-cli
+
+echo 'Install pinentry-mac'
+echo '--------------------'
+brew install pinentry-mac
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+brew install zsh-autosuggestions
+
+echo '==================================='
+echo 'MULTIMEDIA TOOLS'
+echo '==================================='
+
+echo 'Install ffmpeg'
+echo '--------------'
+brew install ffmpeg
+
+echo 'Install yt-dlp'
+echo '--------------'
+brew install yt-dlp
+
+echo '==================================='
+echo 'PRODUCTIVITY APPS'
+echo '==================================='
+
+echo 'Install Warp Terminal'
+echo '---------------------'
+brew install --cask warp
+
+echo 'Install Raycast'
+echo '---------------'
+brew install --cask raycast
+
+echo 'Install Sublime Text'
+echo '--------------------'
+brew install --cask sublime-text
+# https://stackoverflow.com/questions/16199581/open-sublime-text-from-terminal-in-macos
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 echo 'Install git secret'
 echo '------------------'
 brew install git-secret
 
-echo 'Install some nice quicklook plugins'
-echo '-----------------------------------'
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip syntax-highlight suspicious-package
+echo '==================================='
+echo 'DEVELOPMENT APPS'
+echo '==================================='
+
+echo 'Install Docker Desktop'
+echo '----------------------'
+brew install --cask docker-desktop
+
+echo 'Install LM Studio (AI)'
+echo '----------------------'
+brew install --cask lm-studio
+
+echo '==================================='
+echo 'PRODUCTIVITY & UTILITIES'
+echo '==================================='
+
+echo 'Install Obsidian'
+echo '----------------'
+brew install --cask obsidian
+
+echo 'Install Dropbox'
+echo '---------------'
+brew install --cask dropbox
+
+echo 'Install disk-inventory-x'
+echo '-----------------------'
+brew install --cask disk-inventory-x
+
+echo 'Install Shottr (screenshots)'
+echo '----------------------------'
+brew install --cask shottr
+
+echo 'Install GPG Suite'
+echo '-----------------'
+brew install --cask gpg-suite
+
+echo 'Install Hubstaff (time tracking)'
+echo '--------------------------------'
+brew install --cask hubstaff
+
+echo 'Install Loom (screen recording)'
+echo '-------------------------------'
+brew install --cask loom
+
+echo '==================================='
+echo 'MULTIMEDIA APPS'
+echo '==================================='
+
+echo 'Install VLC'
+echo '-----------'
+brew install --cask vlc
+
+echo 'Install foobar2000'
+echo '------------------'
+brew install --cask foobar2000
+
+echo 'Install Spotify'
+echo '---------------'
+brew install --cask spotify
+
+echo 'Install Soulseek'
+echo '----------------'
+brew install --cask soulseek
+
+echo '==================================='
+echo 'INTERNET & COMMUNICATION'
+echo '==================================='
+
+echo 'Install Firefox'
+echo '---------------'
+brew install --cask firefox
+
+echo 'Install Zoom'
+echo '-------------'
+brew install --cask zoom
+
+echo 'Install Transmission'
+echo '--------------------'
+brew install --cask transmission
+
+echo '==================================='
+echo 'SECURITY & SYSTEM'
+echo '==================================='
+
+echo 'Install LuLu (firewall)'
+echo '-----------------------'
+brew install --cask lulu
+
+echo '==================================='
+echo 'QUICKLOOK PLUGINS & UTILITIES'
+echo '==================================='
+
+echo 'Install QuickLook plugins'
+echo '-------------------------'
+brew install --cask \
+  qlcolorcode \        # Preview source code files with syntax highlighting
+  qlstephen \          # Preview plain text files without extensions
+  qlmarkdown \         # Preview Markdown files
+  quicklook-json \     # Preview JSON files
+  qlprettypatch \      # Preview patch files
+  quicklook-csv \      # Preview CSV files
+  betterzip \          # Preview archive contents
+  syntax-highlight \   # Enhanced syntax highlighting for various file types
+  suspicious-package   # Preview package contents
 
 echo 'Install php'
 echo '-----------'
 brew tap shivammathur/php
-brew install shivammathur/php/php@8.3
-brew link --overwrite --force php@8.3
-
-echo 'Install composer'
-echo '----------------'
-EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-ACTUAL_COMPOSER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
-if [ "$EXPECTED_COMPOSER_CHECKSUM" != "$ACTUAL_COMPOSER_CHECKSUM" ]
-then
-    >&2 echo 'ERROR: Invalid installer checksum'
-    rm composer-setup.php
-    exit 1
-fi
-php composer-setup.php
-rm composer-setup.php
-sudo mkdir /usr/local/bin/
-sudo mv composer.phar /usr/local/bin/composer
-
-echo 'Install pie (the PHP installer for extensions)'
-echo '--------------'
-sudo curl -L --output /usr/local/bin/pie https://github.com/php/pie/releases/latest/download/pie.phar && sudo chmod +x /usr/local/bin/pie
+brew install shivammathur/php/php@8.4
+brew link --overwrite --force php@8.4
 
 echo 'Install cpx'
 composer global require cpx/cpx
@@ -175,13 +320,9 @@ brew install yarn
 #echo '-------------------'
 #brew install ghostscript
 
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
-
-echo 'Install zsh-autosuggestions'
-echo '---------------------------'
-brew install zsh-autosuggestions
+#echo 'Install mackup'
+#echo '--------------'
+#brew install mackup
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

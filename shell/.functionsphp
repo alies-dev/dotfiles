@@ -7,7 +7,7 @@ function switch-php {
 
   # Verify if the argument is correctly provided
   if [[ -z "${new_version}" ]]; then
-      echo "You must specify a PHP version to switch to. Example: 'switch-php 8.3'" >&2
+      echo "You must specify a PHP version to switch to. Example: 'switch-php 8.4'" >&2
       return 1
   fi
 
