@@ -194,6 +194,10 @@ echo 'Install LM Studio (AI)'
 echo '----------------------'
 brew install --cask lm-studio
 
+echo 'Install JetBrains Toolbox'
+echo '-------------------------'
+brew install --cask jetbrains-toolbox
+
 echo '==================================='
 echo 'PRODUCTIVITY & UTILITIES'
 echo '==================================='
