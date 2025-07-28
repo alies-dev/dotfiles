@@ -104,21 +104,17 @@ echo 'Install wget'
 echo '------------'
 brew install wget
 
-echo 'Install ncdu'
+echo 'Install ncdu (NCurses Disk Usage)'
 echo '------------'
 brew install ncdu
 
-echo 'Install ack'
+echo 'Install ack (grep alternative)'
 echo '-----------'
 brew install ack
 
-echo 'Install typos-cli'
+echo 'Install typos-cli (codebase spell checker)'
 echo '-----------------'
 brew install typos-cli
-
-echo 'Install pinentry-mac'
-echo '--------------------'
-brew install pinentry-mac
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
@@ -132,7 +128,7 @@ echo 'Install ffmpeg'
 echo '--------------'
 brew install ffmpeg
 
-echo 'Install yt-dlp'
+echo 'Install yt-dlp (video downloader)'
 echo '--------------'
 brew install yt-dlp
 
@@ -193,6 +189,10 @@ brew install --cask shottr
 echo 'Install GPG Suite'
 echo '-----------------'
 brew install --cask gpg-suite
+
+echo 'Install pinentry-mac (for GPG)'
+echo '--------------------'
+brew install pinentry-mac
 
 echo 'Install Hubstaff (time tracking)'
 echo '--------------------------------'
